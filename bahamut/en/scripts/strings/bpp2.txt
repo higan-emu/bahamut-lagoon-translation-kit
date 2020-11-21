@@ -1,0 +1,18 @@
+{width: 8}Attack
+{width: 8}Defense
+{width: 8}Speed
+{width: 8}Magic
+{width: 2}Buy
+{width: 2}Sell
+{width: 8}Equipment
+{width: 8}Information
+{width:12}Classes Able To Equip
+{width: 4}Piro
+{width:12}Currently Holding
+{width:12}Currently Equipped
+{width: 8}No Items
+{width: 8}{space:10}No Items
+{width:12}Equipment Summary
+{width:18}Item Explanation
+{width:18}Dragon Keeper's Item Explanation
+{width: 6}{space:10}Unknown

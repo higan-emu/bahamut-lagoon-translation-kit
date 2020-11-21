@@ -1,0 +1,33 @@
+
+You can HAVE the damn ship!{pause:80}{wait}
+It's all up to you now... Grauel...{pause:80}{wait}
+My work here... is done...{pause:80}{wait}
+Heh... I'm done buying them time now!{pause:80}{wait}
+
+Hmph! I... I'll give you my supplies!{pause:80}{wait}
+My... My Campbell...{pause:80}{wait}
+Ack!{pause:80}{wait}
+Eeee hee hee hee! Not quite good enough!{pause:80}{wait}
+Eeee hee hee hee! I'll get you for this!{pause:80}{wait}
+The Divine Dragons!?{pause:80}{wait}
+Argh! My role in this is over!{pause:80}{wait}
+But the night belongs to me... Why!?{pause:80}{wait}
+With... this... I must vanish...{pause:80}{wait}
+So fierce, the power of the Divine Dragons...{pause:80}{wait}
+Our homeland... We only wanted to...{pause:80}{wait}
+Go back now... Divine Dragons...{pause:80}{wait}
+Come... to Altair...{pause:80}{wait}
+G'huh huh! I AM a persistent one!{pause:80}{wait}
+Is this the end of the Granvelos Empire...?{pause:80}{wait}
+Thank... you...{pause:80}{wait}
+Not quite! I still have my castle!{pause:80}{wait}
+The empire... was supposed to be mine...{pause:80}{wait}
+Did you make it back...?{pause:80}{wait}
+Defeat... Alexander...{pause:80}{wait}
+Graaaaargggh...{pause:80}{wait}
+Groooooargh...
+
+
+I lost to you...{pause:80}{wait}
+What...!? I lost!?{pause:80}{wait}
+

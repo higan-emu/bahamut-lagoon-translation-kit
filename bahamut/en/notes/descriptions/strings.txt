@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+These are kanji to represent the dragon properties on the dragon formation menu screen.{line}The numeric values for each stat are printed below each kanji.{line}menu-dragons.asm renders this text separately, so the string is left blank here instead.{line}But the translation of the above icons for posterity is:{line}{line}Strength (Attack){line}Vitality (Defense){line}Dexterity (Speed){line}Intelligence (Magic){line}Fire{line}Water{line}Thunder{line}Earth{line}Recovery{line}Poison

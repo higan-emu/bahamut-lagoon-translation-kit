@@ -1,0 +1,15 @@
+Knight
+Heavy Armor
+Light Armor
+Assassin
+Palace Armor
+Lancer
+Cross Knight
+Priest
+Wizard
+Warlock
+Dragoner
+Little Devil
+Bunny
+Dragon
+

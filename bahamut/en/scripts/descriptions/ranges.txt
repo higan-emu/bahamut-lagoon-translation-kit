@@ -1,0 +1,192 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thunder attack{right}[Range:] 1 [Radius:] 2
+Neutral attack{right}[Range:] 1 [Radius:] 2
+Neutral attack{right}[Range:] 1 [Radius:] 2
+Fire attack{right}[Range:] 2 [Radius:] 1
+Water attack{right}[Range:] 2 [Radius:] 1
+Thunder attack{right}[Range:] 2 [Radius:] 1
+Poison attack{right}[Range:] 2 [Radius:] 1
+Absorption attack{right}[Range:] 2 [Radius:] 1
+Earth attack{right}[Range:] 2 [Radius:] 1
+Holy attack{right}[Range:] 2 [Radius:] 1
+Dark attack{right}[Range:] 2 [Radius:] 1
+Neutral attack{right}[Range:] 2 [Radius:] 1
+Neutral attack{right}[Range:] 2 [Radius:] 1
+Fire attack{right}[Range:] 5 [Radius:] 2
+Water attack{right}[Range:] 5 [Radius:] 2
+Thunder attack{right}[Range:] 5 [Radius:] 2
+Poison attack{right}[Range:] 5 [Radius:] 2
+Absorption attack{right}[Range:] 5 [Radius:] 2
+Earth attack{right}[Range:] 5 [Radius:] 2
+Holy attack{right}[Range:] 5 [Radius:] 2
+Dark attack{right}[Range:] 5 [Radius:] 2
+Neutral attack{right}[Range:] 5 [Radius:] 2
+Neutral attack{right}[Range:] 5 [Radius:] 2
+Fire magic{right}[Range:] 0 [Radius:] 3
+Water magic{right}[Range:] 0 [Radius:] 3
+Thunder magic{right}[Range:] 0 [Radius:] 3
+Death magic{right}[Range:] 0 [Radius:] 2
+Sleep magic{right}[Range:] 0 [Radius:] 5
+Earth magic{right}[Range:] 1 [Radius:] 2
+Heal magic{right}[Range:] 0 [Radius:] 3
+Death magic{right}[Range:] 0 [Radius:] 4
+Neutral magic{right}[Range:] 0 [Radius:] 2
+Neutral magic{right}[Range:] 0 [Radius:] 2
+Heal magic{right}[Range:] 5 [Radius:] 2
+Cure status magic{right}[Range:] 5 [Radius:] 2
+Sleep magic{right}[Range:] 5 [Radius:] 1
+Death magic{right}[Range:] 5 [Radius:] 1
+Revival magic{right}[Range:] 5 [Radius:] 1
+Earth magic{right}[Range:] 5 [Radius:] 2
+Holy magic{right}[Range:] 5 [Radius:] 3
+Dark magic{right}[Range:] 5 [Radius:] 3
+Heal magic{right}[Range:] 5 [Radius:] 2
+Fire magic{right}[Range:] 5 [Radius:] 2
+Water magic{right}[Range:] 5 [Radius:] 2
+Thunder magic{right}[Range:] 5 [Radius:] 2
+Poison magic{right}[Range:] 5 [Radius:] 2
+Absorption magic{right}[Range:] 5 [Radius:] 2
+Earth magic{right}[Range:] 5 [Radius:] 2
+Holy magic{right}[Range:] 5 [Radius:] 3
+Dark magic{right}[Range:] 5 [Radius:] 3
+Neutral magic{right}[Range:] 5 [Radius:] 2
+Strengthen magic{right}[Range:] 5 [Radius:] 1
+Neutral magic{right}[Range:] 5 [Radius:] 2
+Neutral magic{right}[Range:] 5 [Radius:] 3
+Fire magic{right}[Range:] 5 [Radius:] 4
+Neutral magic{right}[Range:] 5 [Radius:] 5
+Earth magic{right}[Range:] 5 [Radius:] 2
+Neutral magic{right}[Range:] 5 [Radius:] 3
+Fire magic{right}[Range:] 5 [Radius:] 5
+Neutral magic{right}[Range:] 5 [Radius:] 6
+Neutral magic{right}[Range:] 5 [Radius:] 3
+Fire magic{right}[Range:] 5 [Radius:] 4
+Neutral magic{right}[Range:] 5 [Radius:] 5
+Earth magic{right}[Range:] 5 [Radius:] 2
+Neutral magic{right}[Range:] 5 [Radius:] 3
+Fire magic{right}[Range:] 5 [Radius:] 5
+Neutral magic{right}[Range:] 5 [Radius:] 6
+Neutral magic{right}[Range:] 5 [Radius:] 2
+Random magic{right}[Range:] 0 [Radius:] 4
+Random magic{right}[Range:] 0 [Radius:] 4
+Random magic{right}[Range:] 0 [Radius:] 4
+
+
+
+
+
+
+
+
+
+
+Neutral magic{right}[Range:] 5 [Radius:] 1
+Neutral magic{right}[Range:] 5 [Radius:] 1
+Neutral magic{right}[Range:] 5 [Radius:] 1
+Neutral magic{right}[Range:] 5 [Radius:] 1
+
+Fire magic{right}[Range:] 5 [Radius:] 2
+Water magic{right}[Range:] 5 [Radius:] 2
+Thunder magic{right}[Range:] 5 [Radius:] 2
+Poison magic{right}[Range:] 5 [Radius:] 2
+Heal magic{right}[Range:] 5 [Radius:] 2
+Earth magic{right}[Range:] 5 [Radius:] 2
+Neutral magic{right}[Range:] 5 [Radius:] 2
+
+
+
+
+
+
+Holy magic{right}[Range:] 5 [Radius:] 3
+Dark magic{right}[Range:] 5 [Radius:] 3
+Holy magic{right}[Range:] 5 [Radius:] 3
+Dark magic{right}[Range:] 5 [Radius:] 3
+Holy magic{right}[Range:] 5 [Radius:] 3
+
+Holy magic{right}[Range:] 5 [Radius:] 3
+Dark magic{right}[Range:] 5 [Radius:] 3
+Holy magic{right}[Range:] 5 [Radius:] 3
+Dark magic{right}[Range:] 5 [Radius:] 3
+Holy magic{right}[Range:] 5 [Radius:] 3
+Dark magic{right}[Range:] 5 [Radius:] 3
+Holy magic{right}[Range:] 5 [Radius:] 3
+Dark magic{right}[Range:] 5 [Radius:] 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

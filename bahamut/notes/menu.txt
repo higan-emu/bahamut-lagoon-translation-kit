@@ -1,0 +1,6 @@
+Missing menu string hooks:
+
+{ee6fab}ＭＰ：
+{ee6fb8}ＳＰ：
+{ee70a6}ＭＰ：
+{ee70b3}ＳＰ：

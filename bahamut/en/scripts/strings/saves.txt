@@ -1,0 +1,11 @@
+{width:12}Bonus Dungeon 1
+{width:12}Bonus Dungeon 2
+{width:12}Bonus Dungeon 3
+{width: 8}{space:2}Ex-Play
+{width:16}Overwrite save?
+{width:16}Continue playing?
+{width:16}Begin sortie?
+{width: 4}Yes
+{width: 4}No
+{width: 8}No Data
+{width: 8}{space:7}Finished

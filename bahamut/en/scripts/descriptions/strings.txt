@@ -1,0 +1,14 @@
+What would you like to buy?
+How many do you want to buy?
+You don't have enough money.
+You can't carry any more.
+Thank you very much!
+Load which save data?
+Save your current progress?
+Save progress to which slot?
+Overwrite existing save data?
+Data not found.
+Continue game?
+What would you like to sell?
+How many do you want to sell?
+
