@@ -1,2 +1,0 @@
-{width:3}Feed
-{width:3}Exit

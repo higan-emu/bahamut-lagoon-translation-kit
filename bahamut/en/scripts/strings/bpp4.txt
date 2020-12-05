@@ -1,7 +1,0 @@
-{width:8}Attack
-{width:8}Defense
-{width:8}Speed
-{width:8}Magic
-{width:8}EXP
-{width:8}Next Lv.
-{width:8}MP Cost

@@ -1,3 +1,0 @@
-{right}Command: Come!
-{right}Command: Go!
-{right}Command: Wait!
