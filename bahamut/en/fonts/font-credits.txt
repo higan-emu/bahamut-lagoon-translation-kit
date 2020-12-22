@@ -1,0 +1,9 @@
+# font-credits.bmp kernings
+# for simplicity, only the kernings needed for the credits text are defined
+
+1 Et
+1 Lt
+1 Taeos
+1 oj
+1 ra
+1 uj

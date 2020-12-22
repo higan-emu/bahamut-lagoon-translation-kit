@@ -1,0 +1,256 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fire attack{right}[One enemy]
+Water attack{right}[One enemy]
+Thunder attack{right}[One enemy]
+Poison attack{right}[One enemy]
+Absorption attack{right}[One enemy]
+Earth attack{right}[One enemy]
+Holy attack{right}[One enemy]
+Dark attack{right}[One enemy]
+Neutral attack{right}[One enemy]
+Neutral attack{right}[One enemy]
+Fire attack{right}[One enemy]
+Water attack{right}[One enemy]
+Thunder attack{right}[One enemy]
+Poison attack{right}[One enemy]
+Absorption attack{right}[One enemy]
+Earth attack{right}[One enemy]
+Holy attack{right}[One enemy]
+Dark attack{right}[One enemy]
+Neutral attack{right}[One enemy]
+Neutral attack{right}[One enemy]
+Fire attack{right}[All enemies]
+Water attack{right}[All enemies]
+Thunder attack{right}[All enemies]
+Poison attack{right}[All enemies]
+Absorption attack{right}[All enemies]
+Earth attack{right}[All enemies]
+Holy attack{right}[All enemies]
+Dark attack{right}[All enemies]
+Neutral attack{right}[All enemies]
+Neutral attack{right}[All enemies]
+Thunder attack{right}[One enemy]
+Neutral attack{right}[One enemy]
+Neutral attack{right}[One enemy]
+Fire attack{right}[All enemies]
+Water attack{right}[All enemies]
+Thunder attack{right}[All enemies]
+Poison attack{right}[All enemies]
+Absorption attack{right}[All enemies]
+Earth attack{right}[All enemies]
+Holy attack{right}[All enemies]
+Dark attack{right}[All enemies]
+Neutral attack{right}[All enemies]
+Neutral attack{right}[All enemies]
+Fire attack{right}[All enemies]
+Water attack{right}[All enemies]
+Thunder attack{right}[All enemies]
+Poison attack{right}[All enemies]
+Absorption attack{right}[All enemies]
+Earth attack{right}[All enemies]
+Holy attack{right}[All enemies]
+Dark attack{right}[All enemies]
+Neutral attack{right}[All enemies]
+Neutral attack{right}[All enemies]
+Fire magic{right}[All enemies]
+Water magic{right}[All enemies]
+Thunder magic{right}[All enemies]
+Death magic{right}[One enemy]
+Sleep magic{right}[All enemies]
+Earth magic{right}[All enemies]
+Heal magic{right}[All allies]
+Death magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Heal magic{right}[One or all allies]
+Cure status magic{right}[One ally]
+Sleep magic{right}[One enemy]
+Death magic{right}[One enemy]
+Revive magic{right}[One ally]
+Earth magic{right}[All enemies]
+Holy magic{right}[All enemies]
+Dark magic{right}[One enemy]
+Heal magic{right}[All allies]
+Fire magic{right}[One or all enemies]
+Water magic{right}[One or all enemies]
+Thunder magic{right}[One or all enemies]
+Poison magic{right}[All enemies]
+Absorption magic{right}[One enemy]
+Earth magic{right}[All enemies]
+Holy magic{right}[All enemies]
+Dark magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Strengthen magic{right}[One ally]
+Neutral magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Fire magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Earth magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Fire magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Fire magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Earth magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Fire magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Something will happen!
+Something will happen!
+Something will happen!
+
+
+
+
+
+
+
+
+
+
+Critical damage chance{right}[One enemy]
+Critical damage chance{right}[One enemy]
+Critical damage chance{right}[One enemy]
+Critical damage chance{right}[One enemy]
+
+Fire magic{right}[All enemies]
+Water magic{right}[All enemies]
+Thunder magic{right}[All enemies]
+Poison magic{right}[All enemies]
+Heal magic{right}[All allies]
+Earth magic{right}[All enemies]
+Neutral magic{right}[All enemies]
+Transform into something
+Neutral attack{right}[One enemy]
+Neutral attack{right}[One enemy]
+Neutral attack{right}[One enemy]
+Neutral attack{right}[One enemy]
+Neutral attack{right}[One enemy]
+Holy magic{right}[All enemies]
+Dark magic{right}[All enemies]
+Holy magic{right}[All enemies]
+Dark magic{right}[All enemies]
+Holy magic{right}[All enemies]
+Dark attack{right}[All enemies]
+Holy magic{right}[All enemies]
+Dark magic{right}[All enemies]
+Holy magic{right}[All enemies]
+Dark magic{right}[All enemies]
+Holy magic{right}[All enemies]
+Dark magic{right}[All enemies]
+Holy magic{right}[One enemy]
+Dark magic{right}[All enemies]
+Neutral attack{right}[All enemies]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

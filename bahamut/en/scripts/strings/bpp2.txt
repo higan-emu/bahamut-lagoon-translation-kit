@@ -1,0 +1,50 @@
+{width: 8}Formation
+{width: 8}Dragons
+{width: 8}Information
+{width: 8}Equipment
+{width: 8}View Map
+{width: 8}Sortie
+{width: 8}Side Quest
+{width: 8}Auto Formation
+{width: 8}Formation set.
+{width: 8}Magic
+{width: 8}Item
+{width: 6}Strength
+{width: 6}Vitality
+{width: 6}Dexterity
+{width: 6}Intelligence
+{width: 6}Fire
+{width: 6}Water
+{width: 6}Thunder
+{width: 6}Earth
+{width: 6}Recovery
+{width: 6}Poison
+{width: 6}Timidity
+{width: 6}Corruption
+{width: 6}Wisdom
+{width: 6}Aggression
+{width: 6}Mutation
+{width: 6}Affection
+{width: 6}HP
+{width: 6}MP
+{width:16}{skip:7}This is a reserve dragon.
+{width: 8}Attack
+{width: 8}Defense
+{width: 8}Speed
+{width: 2}Buy
+{width: 2}Sell
+{width:12}Classes Able To Equip
+{width: 4}Piro
+{width:12}Currently Holding
+{width:12}Currently Equipped
+{width: 8}No Items
+{width: 8}{skip:10}No Items
+{width:12}Equipment Summary
+{width:18}Item Explanation
+{width:18}Dragon Keeper's Item Explanation
+{width: 6}{skip:10}Unknown
+{width: 9}{right}Command: Come!
+{width: 9}{right}Command: Go!
+{width: 9}{right}Command: Wait!
+{width: 3}{skip:1}Boss
+{width: 3}Space

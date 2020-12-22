@@ -1,0 +1,71 @@
+{center}Presented By Square Co. Ltd.
+{center}[Bahamut Lagoon Staff]
+
+[Project Leader]
+  Hitoshi Sasaki
+
+[Director]
+  Kazushige Nojima
+[Story Event Producer]
+  Tadashi Nomura
+
+[Main Programmers]
+  Kazuhisa Murakami
+  Hiroshi Ono
+
+[Story Event Planner]
+  Motomu Toriyama
+[Simulation Planner]
+  Takatsugu Nakazawa
+[Field Planner]
+  Naoya Kawahira
+
+[Special Effects Programmer]
+  Tetsuji Iwasaki
+[Special Effects Graphic Designer]
+  Kunio Asahara
+
+[Assistant Director]
+  Takeshi Endo
+[Event Planner]
+  Satoru Tsuji
+
+[Music Composer]
+  Noriko Matsueda
+[Sound Engineer]
+  Teruaki Sugawara
+[Sound Programmer]
+  Hidenori Suzuki
+
+[Character Graphic Designers]
+  Fumiyasu Sasaki
+  Murasaki Iriguchi
+[Monster Graphic Designer]
+  Shin Nagasawa
+
+[Event Background Graphic Designer]
+  Rena Sasaki
+[Field Graphic Designers]
+  Takahiro Yamashita
+  Tomoe Inazawa
+
+[Special Thanks]
+  Kenichi Shinoda
+  Takato Itou
+  Hiromi Masuda
+  Hiroyoshi Hamada
+  Yoshitaka Hirota
+
+[Special Thanks]
+  Jun Saitou
+  Kiyomi Tanikawa
+  Hisako Suzuki
+  Kenichi Ohko
+  Miyabi Ito
+  Kouichiro Matsumoto
+
+{center}[Supervisor]
+{center}Hironobu Sakaguchi
+
+{center}[Executive Producer]
+{center}Tetsuo Mizuno

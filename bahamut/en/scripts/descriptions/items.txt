@@ -1,0 +1,128 @@
+
+
+Water affinity
+Thunder affinity
+Fire affinity
+
+Poison affinity
+Holy affinity
+
+
+Strongest sword
+
+Fire affinity
+
+Earth affinity
+Holy affinity
+
+Death enchantment
+Holy affinity
+
+
+Sleep enchantment
+Poison affinity
+
+Death enchantment
+100% hit accuracy
+Absorption enchantment
+Strongest short sword
+
+Water affinity
+Death enchantment
+
+Fire affinity
+Thunder affinity
+Holy affinity
+Strongest spear
+
+Fire affinity
+Water affinity
+Thunder affinity
+Recovery enchantment
+
+
+
+
+
+Poison affinity
+
+Thunder affinity
+
+
+Water resistant
+Thunder resistant
+Fire resistant
+
+Poison resistant
+Bunny and poison resistant
+
+
+Status ailment resistant
+Status ailment resistant
+Fire and thunder resistant
+
+Fire resistant
+Thunder resistant
+
+Water resistant
+Fire resistant
+Thunder resistant
+
+Bunny, poison and death resistant
+Bunny, sleep and poison resistant
+Poison, petrify and death resistant
+Status ailment resistant
+
+All affinity resistant
+
+Earth resistant
+Fire resistant
+
+Water resistant
+Thunder resistant
+Poison, sleep and petrify resistant
+Poison, sleep, petrify and death resistant
+Bunny, sleep and petrify resistant
+Restores 100 HP{right}[One ally]
+Restores 1000 HP{right}[One ally]
+Restores 1000 HP{right}[All allies]
+Restores 50 MP{right}[One ally]
+Restores 500 MP{right}[One ally]
+Restores all HP and MP{right}[One ally]
+Revive{right}[One ally]
+Revive{right}[All allies]
+Cures status ailments{right}[One ally]
+Cures status ailments{right}[All allies]
+Fire magic{right}[All enemies]
+Water magic{right}[All enemies]
+Thunder magic{right}[All enemies]
+Poison magic{right}[All enemies]
+Heal magic{right}[All allies]
+Earth magic{right}[All enemies]
+Holy magic{right}[All enemies]
+Dark magic{right}[All enemies]
+???
+Sleep magic{right}[One enemy]
+Sleep magic{right}[One enemy]
+Sleep magic{right}[All enemies]
+Sleep magic{right}[All enemies]
+Sleep magic{right}[All enemies]
+Sleep magic{right}[All enemies]
+Heal effect{right}[One ally]
+Fire magic{right}[All enemies]
+Heal effect{right}[One ally]
+Cures status ailments{right}[One ally]
+Heal effect{right}[One ally]
+Heal effect{right}[One ally]
+Fire magic{right}[All enemies]
+Damage{right}[One enemy]
+Death magic{right}[One enemy]
+Dark magic{right}[All enemies]
+Fire magic{right}[All enemies]
+Poison magic{right}[All enemies]
+Poison magic{right}[All enemies]
+Poison magic{right}[All enemies]
+Dark magic{right}[All enemies]
+Revive magic{right}[All allies]
+???
+???

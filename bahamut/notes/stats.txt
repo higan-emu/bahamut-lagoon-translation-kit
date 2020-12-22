@@ -1,0 +1,16 @@
+Strength     => ＳＴＲ
+Vitality     => ＶＩＴ
+Dexterity    => ＤＥＸ
+Intelligence => ＭＩＮＤ
+Fire         => ひ (火)
+Water        => みず (水)
+Thunder      => かみなり (雷)
+Recovery     => かいふく (回復)
+Poison       => どく (毒)
+Timidity     => いじけ (いじける)
+Corruption   => いじけ２ (いじける２)
+Wisdom       => かしこさ (賢さ)
+Aggression   => せいかく (性格)
+Mutation     => へんい (変異)
+Affection    => したしさ (親しさ)
+Earth        => min(Fire, Water, Thunder)

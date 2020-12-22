@@ -1,0 +1,85 @@
+# font-small.bmp normal kernings
+
+1 If
+1 Iq
+1 It
+
+1 Kf
+
+1 Lf
+1 Lt
+
+1 Ta
+1 Tc
+1 Td
+1 Te
+1 Tf
+1 Tg
+1 Tj
+1 Tm
+1 Tn
+1 To
+1 Tp
+1 Tq
+1 Tr
+1 Ts
+1 Tt
+1 Tu
+1 Tv
+1 Tw
+1 Tx
+1 Ty
+1 Tz
+
+1 Xf
+
+1 Zf
+
+1 F.
+1 P.
+1 T.
+1 V.
+1 W.
+1 Y.
+1 f.
+1 r.
+1 v.
+
+1 F,
+2 T,
+2 V,
+1 W,
+2 Y,
+1 f,
+1 p,
+2 r,
+2 v,
+
+1 L?
+1 a?
+1 b?
+1 c?
+1 e?
+1 g?
+1 h?
+1 k?
+1 m?
+1 n?
+1 o?
+1 p?
+1 q?
+1 r?
+1 s?
+1 t?
+1 u?
+1 v?
+1 w?
+1 x?
+1 y?
+1 z?
+
+# aggressive kerning (overlaps pixels)
+
+1 Pa
+1 Va
+1 ra

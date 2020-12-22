@@ -1,0 +1,2 @@
+# font-small.bmp tiny kernings
+

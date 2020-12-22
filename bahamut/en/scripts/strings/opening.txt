@@ -1,0 +1,57 @@
+{center}[Bahamut Lagoon Staff]
+
+{center}[Chief Game and Graphic Designer]
+{center}Hitoshi Sasaki
+
+{center}[Director]
+{center}Kazushige Nojima
+
+{center}[Producer]
+{center}Tadashi Nomura
+
+{center}[Main Programmers]
+{center}Kazuhiga Murakami
+{center}Hiroshi Ono
+
+{center}[Story Event Planner]
+{center}Motomu Toriyama
+
+{center}[Simulation Planner]
+{center}Takatsugu Nakazawa
+
+{center}[Effect Programmer]
+{center}Tetsuji Iwasaki
+
+{center}[Field Planners]
+{center}Naoya Kawahira
+{center}Satoru Tsuji
+
+{center}[Battle Planner]
+{center}Takeshi Endo
+
+{center}[Object Graphic Designers]
+{center}Fumiyasu Sasaki
+{center}Murasaki Iriguchi
+
+{center}[Effect Graphic Designer]
+{center}Kunio Asahara
+
+{center}[Monster Graphic Designer]
+{center}Shin Nagasawa
+
+{center}[Field Graphic Designers]
+{center}Rena Sasaki
+{center}Takahiro Yamashita
+{center}Tomoe Inazawa
+
+{center}[Sound Engineer]
+{center}Teruaki Sugawara
+
+{center}[Sound Programmer]
+{center}Hidenori Suzuki
+
+{center}[Music Composer]
+{center}Noriko Matsueda
+
+{center}[Supervisor]
+{center}Hironobu Sakaguchi

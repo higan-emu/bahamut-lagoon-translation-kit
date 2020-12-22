@@ -1,0 +1,12 @@
+{width: 8}Attack
+{width: 8}Defense
+{width: 8}Speed
+{width: 8}Magic
+{width: 8}EXP
+{width: 8}Next Lv.
+{width:16}Overwrite save?
+{width:16}Continue playing?
+{width:16}Begin sortie?
+{width: 4}Yes
+{width: 4}No
+{width: 5}{skip:6}Finished

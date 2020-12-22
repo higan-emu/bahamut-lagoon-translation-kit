@@ -1,0 +1,17 @@
+Possibly unused field strings:
+
+{c0eede}になった。
+{c0ef23}技ＮＯ？？パワー？？地ＩＤ？？
+{c0ef77}行動不能状態です。
+
+Leftover unused phase/win/lose strings:
+
+{c0ed7b}プレイヤーフェイズです。
+{c0ed88}エネミーフェイズです。
+{c0ee89}ゲームオーバーです。
+{c0ee94}シナリオクリアーです。
+
+Leftover remnants between valid strings:
+
+{c0eeac}ひみかつらせしか
+{c0eeb5}　ずぜちいいょい
