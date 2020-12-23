@@ -297,56 +297,43 @@ namespace endingCredits {
 
 namespace endingGraphic {
   enqueue pc
-  seek($d593a6); jsl hook
+  seek($d5f159); jsl hook; nop
   dequeue pc
 
-  //a hook is necessary as the original game hard-codes sprite lists into bank $d5
+  //the original "The End" graphic was comprised of only 4 sprite list entries.
+  //the new graphic needs 24 sprite list entries, but there is no space for it.
+  //so the original graphic is disabled, and the OAM WRAM table is manually set up.
   //------
-  //d593a6  sta $28
-  //d593a8  sep #$20
+  //d5f159  lda #$01   ;#$01 = enable; #$00 = disable
+  //d5f15b  sta $0720  ;enable drawing sprite 2 ("The End" graphic)
   //------
   function hook {
-    sta $28; cmp #$f9cb; sep #$20; beq +; rtl; +
-    lda $2a; cmp #$d5; beq +; rtl; +
-    lda.b #sprites >>  0; sta $28
-    lda.b #sprites >>  8; sta $29
-    lda.b #sprites >> 16; sta $2a; rtl
-  }
+    //disable the original graphic OAM transfer request.
+    //as this was the only sprite onscreen, this disables all OAM WRAM table writes.
+    stz $0720
 
-  //the original sprite list at $d5f9cb only held 4 sprite entries.
-  //we need 24 entries for the new ending graphic, so it is relocated here.
-  function sprites {
-    constant X = $c0
-    constant Y = $e8
+    enter; ldb #$7e
 
-    db 24  //number of sprites
+    //clear the entire OAM WRAM table
+    lda #$e000; ldx.w #0
+  -;sta $6ca0,x; stz $6ca2,x; inx #4; cpx #$0200; bcc -  //clear lower table
+  -;stz $6ca0,x; stz $6ca2,x; inx #4; cpx #$0220; bcc -  //clear upper table
 
-    db Y+$00,X+$00,$00  //row 1
-    db Y+$00,X+$10,$01
-    db Y+$00,X+$20,$02
-    db Y+$00,X+$30,$03
-    db Y+$00,X+$40,$04
-    db Y+$00,X+$50,$05
-    db Y+$00,X+$60,$06
-    db Y+$00,X+$70,$07
+    //transfer 8x3 sprites to OAM WRAM table
+    macro line(variable line) {
+      macro item(variable item) {
+        variable x = $40 + item * 16  //centered horizontally
+        variable y = $58 + line * 16  //centered vertically
+        variable tile = line * 32 + item * 2
+        variable slot = line *  8 + item * 1
+        lda.w #x<<0|y<<8;  sta.w $6ca0+slot*4
+        lda.w #$3100|tile; sta.w $6ca2+slot*4
+      }
+      item(0); item(1); item(2); item(3); item(4); item(5); item(6); item(7)
+    }
+    line(0); line(1); line(2)
 
-    db Y+$10,X+$00,$08  //row 2
-    db Y+$10,X+$10,$09
-    db Y+$10,X+$20,$0a
-    db Y+$10,X+$30,$0b
-    db Y+$10,X+$40,$0c
-    db Y+$10,X+$50,$0d
-    db Y+$10,X+$60,$0e
-    db Y+$10,X+$70,$0f
-
-    db Y+$20,X+$00,$10  //row 3
-    db Y+$20,X+$10,$11
-    db Y+$20,X+$20,$12
-    db Y+$20,X+$30,$13
-    db Y+$20,X+$40,$14
-    db Y+$20,X+$50,$15
-    db Y+$20,X+$60,$16
-    db Y+$20,X+$70,$17
+    leave; rtl
   }
 }
 

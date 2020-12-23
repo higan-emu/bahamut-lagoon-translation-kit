@@ -2,7 +2,7 @@ architecture wdc65816
 include "instructions.asm"
 
 variable codeCursor = $f00000  //$f00000-$f1ffff
-variable textCursor = $f20000  //$f20000-$f7ffff
+variable textCursor = $f20000  //$f20000-$f6ffff
 variable sramCursor = $316000  //$316000-$317fff
 
 output "../en/rom/bahamut-en.sfc", create

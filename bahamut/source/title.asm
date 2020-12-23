@@ -57,7 +57,7 @@ namespace hook {
   //(C) 1996 Square
   seek($d5f5cb); dw +
   seek($d5f71a); +; db 6
-    db Y,X+$00,$30  //the logo wasn't properly centered before.
+    db Y,X+$00,$30  //the graphic wasn't properly centered before.
     db Y,X+$10,$31  //this centers it perfectly in the middle of the screen.
     db Y,X+$20,$32
     db Y,X+$30,$33

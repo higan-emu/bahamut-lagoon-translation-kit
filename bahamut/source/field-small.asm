@@ -803,64 +803,31 @@ namespace dragonCommand {
 
 namespace techniqueSmall {
   enqueue pc
+  seek($c05315); jsl setCursorAttributes; nop
   seek($c0d6ab); jsl main; jmp $d6b6
   seek($c0d648); ldy #$c444  //move the start of the line one tile to the left
   seek($c0d781); ldx #$062c  //move the start of MP/SP numbers one tile to the right
   seek($c0ea96); lda #$ff    //move the left-side cursor five pixels to the left
   seek($c0eaa1); lda #$77    //move the right-side cursor five pixels to the left
-  seek($c0eb0e); jml setCursorAttributes; nop
   dequeue pc
 
   //originally, the sprite cursor could only be positioned from X=0-255.
   //the technique list required an extra tile; and X=0 caused the cursor to touch the text.
   //this function hooks the routine that sets the OAM upper-table attributes,
   //so that when a sprite at position #$ff (255) is detected, it places it at #$1ff (-1) instead.
-  //because this routine is shared by other sprite handling code,
-  //a few extra checks are performed to guarantee this only affects the cursor sprite.
   //------
-  //c0ea96  lda #$00     ;X position of left-hand sprite cursor in the technique menu
-  //c0ea98  sta $0800,y  ;store position in sprite table
+  //c0ea4f  jsr $ea94    ;call sprite subroutine
   //......
-  //c0eb0b  iny
-  //c0eb0c  iny
-  //c0eb0d  iny          ;increment sprite index to the attributes location
-  //c0eb0e  lda #$80     ;set OAM upper-table attributes for sprite in d6-d7
-  //c0eb10  jsr $5300    ;function to write to the OAM upper-table
-  //......
-  //c05317  sta $0a00,y  ;store OAM upper-table attributes for sprite (after shifting into place)
+  //c05315  ora $10      ;set sprite attributes
+  //c05317  sta $0a00,y  ;store in OAM upper table
   //------
   function setCursorAttributes {
-    constant oamTableAddress = $0800-3  //location of WRAM copy of the sprite table ($0220 bytes)
-    constant baseCursorY     = $a7
-
-    cpy #$0003; bne normal          //the cursor is always the first sprite in the table
-    lda.w oamTableAddress+0,y       //get X position
-    cmp #$ff; bne normal            //it will only ever be placed at -1 by us
-    lda.w oamTableAddress+1,y       //get Y position
-    cmp.b #baseCursorY+ 0; beq +    //make sure it's at one of the four possible locations
-    cmp.b #baseCursorY+12; beq +
-    cmp.b #baseCursorY+24; beq +
-    cmp.b #baseCursorY+36; beq +
-    bra normal
-  +;lda.w oamTableAddress+2,y       //get character#
-    and #$f8; cmp #$e0; bne normal  //ensure it's one of the eight sprite animation tiles
-    lda.w oamTableAddress+3,y       //get lower-table attributes
-    cmp #$30; bne return            //final check
-
-    //this is the sprite cursor trying to be placed at X=-1, set the extended attribute bit
-    modify: {
-      lda #$c0; bra return
-    }
-
-    //this is not the sprite cursor trying to be placed at -1; don't set X.d8
-    normal: {
-      lda #$80; bra return
-    }
-
-    return: {
-      pea $eb12
-      jml $c05300
-    }
+    ora $10; sta $0a00,y                 //store sprite attributes into OAM upper table
+    rep #$20; lda $06,s                  //determine the parent function caller of this code
+    cmp #$ea51; sep #$20; beq +; rtl; +  //ensure the caller is the technique menu
+    cpy #$0000; beq +; rtl; +            //the cursor always uses the first sprite slot
+    lda $0800; cmp #$ff; beq +; rtl; +   //check if X=-1
+    lda $0a00; ora #$40; sta $0a00; rtl  //set X.d8=1 if so (255 => -1)
   }
 
   //------
