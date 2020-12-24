@@ -47,7 +47,7 @@ namespace information {
     enter
     ldy.w #strings.bpp2.equipmentSummary
     lda #$000b; ldx #$000b; write.bpp2(lists.strings.bpp2)
-  //lda $7e3be0; ora #$0002; sta $7e3be0  //hack: enable ex-play menu
+  //lda $7e3be0; ora #$0002; sta $7e3be0  //enable ex-play menu
     leave; rtl
   }
 
