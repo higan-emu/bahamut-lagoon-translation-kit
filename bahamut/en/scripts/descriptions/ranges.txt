@@ -73,14 +73,14 @@ Neutral magic{right}[Range:] 5 [Radius:] 2
 Strengthen magic{right}[Range:] 5 [Radius:] 1
 Neutral magic{right}[Range:] 5 [Radius:] 2
 Neutral magic{right}[Range:] 5 [Radius:] 3
-Fire magic{right}[Range:] 5 [Radius:] 4
+Water magic{right}[Range:] 5 [Radius:] 4
 Neutral magic{right}[Range:] 5 [Radius:] 5
 Earth magic{right}[Range:] 5 [Radius:] 2
 Neutral magic{right}[Range:] 5 [Radius:] 3
 Fire magic{right}[Range:] 5 [Radius:] 5
 Neutral magic{right}[Range:] 5 [Radius:] 6
 Neutral magic{right}[Range:] 5 [Radius:] 3
-Fire magic{right}[Range:] 5 [Radius:] 4
+Water magic{right}[Range:] 5 [Radius:] 4
 Neutral magic{right}[Range:] 5 [Radius:] 5
 Earth magic{right}[Range:] 5 [Radius:] 2
 Neutral magic{right}[Range:] 5 [Radius:] 3

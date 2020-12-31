@@ -201,6 +201,30 @@ function techniqueDescription {
   }
 }
 
+function techniqueName {
+  enqueue pc
+  seek($c1b4d6); jsl main; jmp $b4e6
+  dequeue pc
+
+  constant target = $7ec000
+
+  //------
+  //c1b4d6  sta $7ec001  ;store technique name ID
+  //c1b4da  lda #$f6     ;technique control code
+  //c1b4dc  sta $7ec000  ;store control code
+  //c1b4e0  lda #$ff     ;string terminal
+  //c1b4e2  sta $7ec002  ;store terminal
+  //------
+  //A => technique
+  function main {
+    enter; ldx #$0000; append.redirect(target); ldx #$0000
+    and #$00ff
+    append.alignCenter(text)
+    append.stringIndexed(text, lists.techniques.text)
+    leave; rtl
+  }
+}
+
 function itemName {
   enqueue pc
   seek($c1b0e5); jsl main; nop #12

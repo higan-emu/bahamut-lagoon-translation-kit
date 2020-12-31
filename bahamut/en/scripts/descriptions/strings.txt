@@ -6,9 +6,9 @@ Thank you very much!
 Load which save data?
 Save your current progress?
 Save progress to which slot?
-Overwrite existing save data?
+This will erase the existing save data!
 Data not found.
-Continue game?
+This will exit the save menu.
 What would you like to sell?
 How many do you want to sell?
 

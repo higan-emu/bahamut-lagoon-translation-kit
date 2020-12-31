@@ -8,16 +8,16 @@ seek(codeCursor)
 function vsync {
   php; rep #$20; pha
 
-  //latch and read vcounter
   sep #$20
-  lda $002137
-  lda $00213d; xba
-  lda $00213d; and #$01; xba
+  lda $00213f                 //reset OPVCT latch
+  lda $002137                 //latch the counters
+  lda $00213d; xba            //read OPVCTL
+  lda $00213d; and #$01; xba  //read OPVCTH
 
   rep #$20
   cmp.w #225; bcc waitForThisVblank  //still in active display
   cmp.w #253; bcs waitForNextVblank  //not enough Vblank time remaining
-  pla; plp; rtl  //in Vblank
+  pla; plp; rtl
 
   waitForThisVblank: {
     sep #$20

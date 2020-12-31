@@ -58,8 +58,7 @@ namespace tileInformation {
 
   function main {
     //the original game constructs the debug string here.
-    //the original string is 80 bytes in length, and that length should not be exceeded.
-    //the new string is 71 bytes in length currently.
+    //the original string is 80 bytes in length, the new string is 71 bytes in length.
     constant output = $7ef800
 
     variable(2, coordinateX)     //coordinates of where Byuu is currently standing
@@ -89,6 +88,29 @@ namespace tileInformation {
     append.literal(output, "Tile attributes: ")
     lda tileAttributes; append.hex04(output); append.wait(output)
 
+    leave; rtl
+  }
+}
+
+//triggered by pressing R+Y in the chapter gameplay engine
+//prints a 1-line text window with the ROM release number in it
+namespace releaseNumber {
+  enqueue pc
+  seek($da5ba7); jsl main; jmp $5bf0
+  dequeue pc
+
+  //[$da5c18] "リリースナンバー"
+  //[$da0020] "Release No.  254"
+  //the Japanese text and English number were combined to form the string:
+  //$7e8000 <= "リリースナンバー　　　２５４"
+  function main {
+    //the original game constructs the debug string here.
+    //the original string is 16 bytes in length; the new string is 20 bytes in length.
+    //there is extra space available here for the longer English string (see tileInformation)
+    constant output = $7ef800
+
+    enter; ldx #$0000
+    append.literal(output, "Release Number: 254"); append.wait(output)
     leave; rtl
   }
 }

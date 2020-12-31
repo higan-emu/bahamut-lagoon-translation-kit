@@ -68,9 +68,9 @@ Water resistant
 Fire resistant
 Thunder resistant
 
-Bunny, poison and death resistant
-Bunny, sleep and poison resistant
-Poison, petrify and death resistant
+Bunny, poison, and death resistant
+Bunny, sleep, and poison resistant
+Poison, petrify, and death resistant
 Status ailment resistant
 
 All affinity resistant
@@ -80,9 +80,9 @@ Fire resistant
 
 Water resistant
 Thunder resistant
-Poison, sleep and petrify resistant
-Poison, sleep, petrify and death resistant
-Bunny, sleep and petrify resistant
+Poison, sleep, and petrify resistant
+Poison, sleep, petrify, and death resistant
+Bunny, sleep, and petrify resistant
 Restores 100 HP{right}[One ally]
 Restores 1000 HP{right}[One ally]
 Restores 1000 HP{right}[All allies]

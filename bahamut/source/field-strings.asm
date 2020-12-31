@@ -72,8 +72,8 @@ namespace unitDescription {
     //transfer the string to render
     phk; plb
     ldx #$0000; append.string(strings)  //source specified to use Y index
-
     lda #$18; render.large.bpp4()
+
     vsync()
     ldb #$00; rep #$20
     lda #$6000; lsr; sta $2116

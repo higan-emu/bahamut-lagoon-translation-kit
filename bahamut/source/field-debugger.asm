@@ -65,11 +65,11 @@ namespace address {
     constant map  = $c508
   }
   namespace line3 {
-    constant data = $0100
+    constant data = $0140
     constant map  = $c588
   }
   namespace line4 {
-    constant data = $0140
+    constant data = $0180
     constant map  = $c608
   }
 }

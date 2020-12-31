@@ -130,8 +130,7 @@ namespace write {
   //X => source index
   //Y => target index
   macro bpp2(variable source) {
-    enter; ldb #$00
-    vsync()
+    enter; vsync(); ldb #$00
     pha; tya; mul(16); ply
     add.w #source >>  0; sta $4302
     lda.w #source >> 16; adc #$0000; sta $4304
@@ -156,8 +155,7 @@ namespace write {
   //X => source index
   //Y => target index
   macro bpp4(variable source) {
-    enter; ldb #$00
-    vsync()
+    enter; vsync(); ldb #$00
     pha; tya; mul(32); ply
     add.w #source >>  0; sta $4302
     lda.w #source >> 16; adc #$0000; sta $4304

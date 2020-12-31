@@ -33,6 +33,9 @@ seek($c0ffd5); db $35  //was $31
 //  $33:6000-7fff: pre-rendered name tiledata cache
 seek($c0ffd8); db $05  //was $03
 
+//erase the ROM checksum
+seek($c0ffdc); dw $ffff,$0000
+
 //enable the debugger
 //seek($c0ffad); db $00,$ff
 //include "cheats.asm"

@@ -2,6 +2,37 @@ namespace combat {
 
 seek(codeCursor)
 
+//there is a bug in S-CPU A where DMAs from a lower channel#
+//can fail if an HDMA from a higher channel# targets $2100 (BBADx=$00)
+//this bug would trigger on the experience screen after combat.
+//this mitigation works by moving the HDMA to $21ff+$2100 instead.
+namespace hdmaMitigation {
+  variable(16, hdmaTable)
+
+  enqueue pc
+  seek($c11341); {
+    lda #$10; sta hdmaTable+0; lda #$80; sta hdmaTable+2
+    lda #$60; sta hdmaTable+3; lda #$80; sta hdmaTable+5
+    lda #$56; sta hdmaTable+6; lda #$80; sta hdmaTable+8
+    lda #$08; sta hdmaTable+9; lda #$80; sta hdmaTable+11
+    tda; sta hdmaTable+12  //D=0
+    lda #$01; sta $4370  //write pattern 0,1
+    lda #$ff; sta $4371  //write address $ff
+    lda.b #hdmaTable >>  0; sta $4372; sta $4378
+    lda.b #hdmaTable >>  8; sta $4373; sta $4379
+    lda.b #hdmaTable >> 16; sta $4374
+    assert(pc() == $c11395)
+  }
+  seek($c102f5); {
+    //the table is written to dynamically to perform a transition effect.
+    //the transition occurs when entering and leaving battle scenes.
+    sta hdmaTable+5  //$2100 value for the second table entry
+    sta hdmaTable+8  //$2100 value for the third table entry
+    assert(pc() == $c102fd)
+  }
+  dequeue pc
+}
+
 namespace constants {
   constant hook        = $fe
   constant terminal    = $ff
@@ -312,8 +343,7 @@ namespace write {
   //X => target index
   //Y => source index
   macro bpp4(variable source) {
-    enter; ldb #$00
-    vsync()
+    enter; vsync(); ldb #$00
     pha; tya; mul(32); ply
     add.w #source >>  0; sta $4302
     lda.w #source >> 16; adc #$0000; sta $4304
@@ -325,21 +355,10 @@ namespace write {
     lda #$01; sta $420b
     leave
   }
-
-  //A => tile count
-  //X => target index
   function bpp4 {
-    enter; ldb #$00
-    vsync(); tay
-    lda.w #render.buffer >>  0; sta $4302
-    lda.w #render.buffer >> 16; sta $4304
-    txa; mul(32); add #$8000; lsr; sta $2116
-    tya; mul(32); sta $4305; sep #$20
-    lda #$80; sta $2115
-    lda #$01; sta $4300
-    lda #$18; sta $4301
-    lda #$01; sta $420b
-    leave; rtl
+    php; rep #$10; phy
+    ldy #$0000; write.bpp4(render.buffer)
+    ply; plp; rtl
   }
   macro bpp4() {
     jsl write.bpp4
@@ -737,7 +756,6 @@ namespace enemy {
   constant properties = $7e6444
   constant affinities = $7e6434
   constant ailments   = $7e6421
-  constant enchants   = $7e6423
 
   function setWindowWidth {
     constant windowWidth = $097e
@@ -760,7 +778,6 @@ namespace enemy {
     lda ailments,x;   and.b #status.ailment.sleeping;  beq +; iny; +
     lda ailments,x;   and.b #status.ailment.poisoned;  beq +; iny; +
     lda ailments,x;   and.b #status.ailment.bunny;     beq +; iny; +
-    lda enchants,x;   and.b #status.enchant.bingo;     beq +; iny; +
 
     //windowWidth <= max(windowWidth, iconCount)
     phy; lda width; cmp $01,s; bcs +
@@ -810,7 +827,6 @@ namespace enemy {
     lda ailments,y;   and.w #status.ailment.sleeping;  beq +; tilemap.write(glyph.sleeping ); +
     lda ailments,y;   and.w #status.ailment.poisoned;  beq +; tilemap.write(glyph.poisoned ); +
     lda ailments,y;   and.w #status.ailment.bunny;     beq +; tilemap.write(glyph.bunny    ); +
-    lda enchants,y;   and.w #status.enchant.bingo;     beq +; tilemap.write(glyph.bingo    ); +
 
     leave; rtl
   }

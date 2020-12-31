@@ -83,15 +83,19 @@ namespace saves {
 
   dequeue pc
 
+  //chapterSlot{1-3} and timeSlot{1-3} are intentionally not double-buffered here,
+  //because the large-font chapter title strings are not double-buffered either.
+  //if they were double-buffered, they would be updated a frame later than the titles.
+  //this would make saving progress feel laggier when updating the onscreen text.
   allocator.bpp4()
-  allocator.create( 8,2,chapterSlot1)
-  allocator.create( 8,2,chapterSlot2)
-  allocator.create( 8,2,chapterSlot3)
+  allocator.create( 8,1,chapterSlot1)
+  allocator.create( 8,1,chapterSlot2)
+  allocator.create( 8,1,chapterSlot3)
   allocator.create(12,3,bonusDungeon)
   allocator.create( 8,1,exPlay)
-  allocator.create(10,2,timeSlot1)
-  allocator.create(10,2,timeSlot2)
-  allocator.create(10,2,timeSlot3)
+  allocator.create(10,1,timeSlot1)
+  allocator.create(10,1,timeSlot2)
+  allocator.create(10,1,timeSlot3)
   allocator.create( 8,1,noData)
   allocator.create(16,1,save)
   allocator.create(16,1,done)

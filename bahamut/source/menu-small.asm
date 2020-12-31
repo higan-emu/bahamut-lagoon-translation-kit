@@ -229,8 +229,7 @@ namespace write {
   //X => target index
   //Y => source index
   macro bpp2(variable source) {
-    enter; ldb #$00
-    vsync()
+    enter; vsync(); ldb #$00
     pha; tya; mul(16); ply
     add.w #source >>  0; sta $4302
     lda.w #source >> 16; adc #$0000; sta $4304
@@ -244,7 +243,7 @@ namespace write {
     leave
   }
   function bpp2 {
-    php; rep #$30; phy
+    php; rep #$10; phy
     ldy #$0000; write.bpp2(render.buffer)
     ply; plp; rtl
   }
@@ -256,8 +255,7 @@ namespace write {
   //X => target index
   //Y => source index
   macro bpp4(variable source) {
-    enter; ldb #$00
-    vsync()
+    enter; vsync(); ldb #$00
     pha; tya; mul(32); ply
     add.w #source >>  0; sta $4302
     lda.w #source >> 16; adc #$0000; sta $4304
@@ -271,7 +269,7 @@ namespace write {
     leave
   }
   function bpp4 {
-    php; rep #$30; phy
+    php; rep #$10; phy
     ldy #$0000; write.bpp4(render.buffer)
     ply; plp; rtl
   }
@@ -288,6 +286,13 @@ namespace status {
   seek($ee907a); jsl main; rts
   dequeue pc
 
+  constant type = $0005fc
+  namespace type {
+    constant player = 0
+    constant dragon = 1
+    constant enemy  = 2
+  }
+
   function main {
     variable(2, property)  //enemies only
     variable(2, affinity)  //enemies only
@@ -300,8 +305,8 @@ namespace status {
     ldy #$0008; lda [$44],y; and.w #status.ailment.mask;  sta ailments
     ldy #$000a; lda [$44],y; and.w #status.enchant.mask;  sta enchants
 
-    lda $0005fc; and #$00ff  //0 = players, 1 = dragons, 2 = enemies
-    cmp #$0002; jne writeAilments
+    //only enemies have properties
+    lda type; and #$00ff; cmp.w #type.enemy; jne writeAilments
 
   writeProperties:
     lda property; and.w #status.property.undead;   beq +; tilemap.write(glyph.undead   ); +
@@ -320,17 +325,11 @@ namespace status {
     lda ailments; and.w #status.ailment.poisoned;  beq +; tilemap.write(glyph.poisoned ); +
     lda ailments; and.w #status.ailment.bunny;     beq +; tilemap.write(glyph.bunny    ); +
 
+    //only players and dragons have enchants
+    lda type; and #$00ff; cmp.w #type.enemy; jeq clear
+
   writeEnchants:
     lda enchants; and.w #status.enchant.bingo;     beq +; tilemap.write(glyph.bingo    ); +
-
-    lda $0005fc; and #$00ff
-    cmp #$0000;  jeq clear  //players (magic and item screens)
-    cmp #$0001;  jeq clear  //players and dragons
-    cmp #$0002;  jeq enemy  //enemies
-    jmp clear
-
-  enemy:
-    jmp clear
 
   clear:
     //this function may have updated previous status icons.
