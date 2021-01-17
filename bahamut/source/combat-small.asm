@@ -70,18 +70,18 @@ namespace glyph {
   constant sleeping  = $2d
   constant poisoned  = $2e
   constant bunny     = $2f
-  constant bingo     = $1e
+  constant bingo     = $ca
 }
 
 //available tiles:
 //$01e-$029 =  12 tiles (item icons)
 //$030-$0cb = 156 tiles (normal)
-//$0d0-$169 = 154 tiles (active)
+//$0cf-$169 = 155 tiles (active)
 
 //reserved tiles:
 //$000-$01d = window borders + affinity icons + HP/MP/SP labels
 //$02a-$02f = ailment icons
-//$0cc-$0cf = level up text + potion icon
+//$0ca-$0ce = bingo icon + potion icon + level up text
 //$16a-$16b = dragon stats labels
 //$16c-$16d = EXP label
 //$16e-$17f = dragon stats labels
@@ -1015,16 +1015,16 @@ namespace item {
   enqueue pc
   seek($c12f0e); jml hook; nop
   seek($c17636); jsl dropped; nop #6
-  seek($c17644); nop #3  //disable printing "ko" item counter
   seek($c13fb2); jsl quantity; nop #3
   seek($c19d06); jsl use.setWindowWidth; nop
   seek($c19d43); jsl use.setCount; nop #2
-  seek($c19d56); nop #3  //disable printing "/" separator
   seek($c19d5b); jsl use.setTotal; nop #2
-  seek($c19d67); nop #3  //disable printing "ko" item counter
   seek($c13fde); jsl page.setIndex
-  seek($c13fe8); nop #3  //disable printing "/" separator
   seek($c13ff9); jsl page.setTotal
+  seek($c17644); nop #3   //disable printing "ko" item counter
+  seek($c19d56); nop #3   //disable printing "/" separator
+  seek($c19d67); nop #3   //disable printing "ko" item counter
+  seek($c13fe8); nop #13  //disable printing "/" separator + attribute modification
   dequeue pc
 
   //------

@@ -58,7 +58,7 @@ namespace dragons {
     constant fire         = $013  //1 tile
     constant water        = $014  //1 tile
     constant thunder      = $017  //1 tile
-    constant recovery     = $0cf  //1 tile
+    constant recovery     = $0cb  //1 tile
     constant poison       = $015  //1 tile
     constant strength     = $16a  //2 tiles
     constant vitality     = $16e  //2 tiles

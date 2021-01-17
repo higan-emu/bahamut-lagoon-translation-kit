@@ -8,7 +8,7 @@
 {icon:1}Excalibur
 {icon:1}Scharnhorst
 {icon:1}Gneisenau
-{icon:1}Dreadknought
+{icon:1}Dreadnought
 {icon:2}Battle Axe
 {icon:2}Burning Axe
 {icon:2}Crescent
@@ -88,7 +88,7 @@
 {icon:10}Royal Drug
 {icon:10}Magic Gin
 {icon:10}High Magic Gin
-{icon:10}Elixer
+{icon:10}Elixir
 {icon:10}Returnsable
 {icon:10}Returnsable SP
 {icon:10}Panacea

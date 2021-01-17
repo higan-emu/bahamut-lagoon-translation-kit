@@ -37,8 +37,11 @@ seek($c0ffd8); db $05  //was $03
 seek($c0ffdc); dw $ffff,$0000
 
 //enable the debugger
-//seek($c0ffad); db $00,$ff
-//include "cheats.asm"
+if 0 {
+  notice "debugger enabled"
+  seek($c0ffad); db $00,$ff
+  include "cheats.asm"
+}
 
 include "macros.asm"
 include "insert.asm"

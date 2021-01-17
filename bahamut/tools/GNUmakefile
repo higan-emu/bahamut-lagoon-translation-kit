@@ -62,7 +62,6 @@ build:
 #	out/checksum
 
 patch:
-	cd ../source && bass main.asm
 	$(call delete,../en/rom/bahamut-en-patch.bps)
 	beat -create:bps ../en/rom/bahamut-en-patch.bps ../jp/rom/bahamut-jp.sfc ../en/rom/bahamut-en.sfc
 

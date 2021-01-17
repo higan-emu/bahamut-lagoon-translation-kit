@@ -87,22 +87,23 @@ namespace dispatcher {
     cmp #$0003; rtl
   }
 
-  //A => party# (1-7)
+  //A => party#
   function party {
     enter
     dec; and #$0007
-    pha; lda $0f,s; tax; lda tilemap.address; tay; pla  //X => caller; Y => target
-    cpy #$074e; bne +; jsl formations.party; leave; rtl; +
-    cpx #$8052; bne +; jsl      party.party; leave; rtl; +
-    cpx #$a570; bne +; jsl  overviews.party; leave; rtl; +  //Formations
-    cpx #$a75e; bne +; jsl  overviews.party; leave; rtl; +  //Equipments
-    cpx #$cb3e; bne +; jsl    dragons.party; leave; rtl; +
+    pha; lda $0f,s; tax; pla  //X => caller
+    cpx #$8052; bne +; jsl      party.party; leave; rtl; +  //Party and Campaign
+    cpx #$a570; bne +; jsl formations.party; leave; rtl; +  //Formations (selected)
+    cpx #$a75e; bne +; jsl  overviews.party; leave; rtl; +  //Formations and Equipments (list)
+    cpx #$cb3e; bne +; jsl    dragons.party; leave; rtl; +  //Dragon Formation
     leave; rtl
 
+    //other party
     function other {
       php; rep #$20; pha
-      lda #$0006           //location of "Other" string in parties list
-      jsl overviews.party  //"Other" only appears on the formation and equipment overview screens
+      lda $04,s  //A => caller
+      cmp #$a515; bne +; lda #$0006; jsl formations.party; pla; plp; rtl; +  //Formations (selected)
+      cmp #$a750; bne +; lda #$0006; jsl  overviews.party; pla; plp; rtl; +  //Formations and Equipments (list)
       pla; plp; rtl
     }
   }

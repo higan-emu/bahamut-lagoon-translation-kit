@@ -73,7 +73,7 @@ namespace formations {
   allocator.create(6,10,techniqueName)
   allocator.create(3,10,techniqueLevel)
 
-  //A => party
+  //A => selected party
   function party {
     enter
     mul(5); tay

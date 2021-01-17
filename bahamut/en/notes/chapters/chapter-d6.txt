@@ -2,6 +2,11 @@
 {end}
 
 {091d}
+"Didn't you have something to tell me?" is not a literal translation.
+It's more like "Tell me about it."
+Earlier in the script Bikkebakke tells you that he wants to talk to you about something later on.
+So in this context, this change makes the intention more clear.
+Choosing the option results in Bikkebakke telling you his backstory about why he's selling things.
 {end}
 
 {0959}

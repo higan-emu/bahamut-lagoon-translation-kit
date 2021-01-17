@@ -77,6 +77,8 @@
 {end}
 
 {12af}
+The Japanese text mentions that the Scharnhorst is the strongest sword for a cross-knight, but with +92 attack and +10 magic, it's equal to the Gneisenau and weaker than the Dreadnought with +99 attack.
+As it was an inaccurate statement, I've removed the comment from the translation.
 {end}
 
 {12ea}

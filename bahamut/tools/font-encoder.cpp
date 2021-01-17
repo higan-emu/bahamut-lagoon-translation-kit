@@ -162,9 +162,9 @@ auto rebuildCombatFont() -> void {
   replace(0x63, 0x0cd);
   replace(0x64, 0x0ce);
 
-  //move "Potion" icon which is used on the dragon feeding screen.
-  //this is so that the 12-tile item icon range can be used for tiledata.
-  memory::copy(output.data() + 0x0cf * 32, output.data() + 0x027 * 32, 32);
+  //move "Bingo" and "Potion" icons so the 12-tile item icon range can be used for tiledata
+  memory::copy(output.data() + 0x0ca * 32, output.data() + 0x01e * 32, 32);  //Bingo
+  memory::copy(output.data() + 0x0cb * 32, output.data() + 0x027 * 32, 32);  //Potion
 
   file::write({pathEN, "binaries/fonts/font-combat-data.bin"}, output);
 }

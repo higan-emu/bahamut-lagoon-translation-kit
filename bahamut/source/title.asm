@@ -14,6 +14,41 @@ namespace hook {
   seek($d5e6b9); lda.w #titleFont.data >>  0
   seek($d5e6c0); lda.b #titleFont.data >> 16
 
+  //Logo
+  variable X = $8e  //was $94
+  variable Y = $d8  //was $d1
+
+  //Bahamut Lagoon
+  seek($d5f5de); db 27  //27 sprites objects make up the logo
+    db Y+$00,X+$00,$00
+    db Y+$00,X+$10,$01
+    db Y+$02,X+$20,$02
+    db Y+$02,X+$30,$03
+    db Y+$02,X+$40,$04
+    db Y+$02,X+$50,$05
+    db Y+$05,X+$60,$06
+    db Y+$05,X+$70,$07
+    db Y+$10,X+$00,$08
+    db Y+$10,X+$10,$09
+    db Y+$12,X+$20,$0a
+    db Y+$12,X+$30,$0b
+    db Y+$12,X+$40,$0c
+    db Y+$12,X+$50,$0d
+    db Y+$15,X+$60,$0e
+    db Y+$15,X+$70,$0f
+    db Y+$20,X+$00,$10
+    db Y+$20,X+$10,$11
+    db Y+$0e,X+$80,$12
+    db Y+$0e,X+$90,$13
+    db Y+$0e,X+$a0,$14
+    db Y+$0e,X+$b0,$15
+    db Y+$1e,X+$80,$1a
+    db Y+$1e,X+$90,$1b
+    db Y+$1e,X+$a0,$1c
+    db Y+$1e,X+$b0,$1d
+    db Y+$1e,X+$c0,$1e
+
+  //Menu
   variable X = $df
   variable Y = $f5
 
