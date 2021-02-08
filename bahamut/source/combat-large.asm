@@ -133,7 +133,7 @@ function renderLargeText {
     }
 
     function skip {
-      lda [buffer],y; and #$00ff
+      lda [buffer],y; and #$00ff; iny
       add pixel; sta pixel; rtl
     }
   }

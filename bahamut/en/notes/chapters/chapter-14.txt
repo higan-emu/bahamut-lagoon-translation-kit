@@ -131,6 +131,7 @@
 {end}
 
 {22eb}
+"The ship" isn't explicitly mentioned here, but is implied. I added it to make the line more clear.
 {end}
 
 {2310}

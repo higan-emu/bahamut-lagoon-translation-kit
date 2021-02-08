@@ -308,6 +308,7 @@ namespace renderLargeText {
     function skip {
       jsl increment
       jsl read
+      jsl increment
       php; rep #$30
       and #$00ff; add pixel; sta pixel
       plp; rtl

@@ -108,7 +108,7 @@ German for clutter.
 
 
 
-
+Only skip one pixel instead of two, as this name hits up against the "Lv." text in status screens.
 
 
 

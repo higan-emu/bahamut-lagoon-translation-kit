@@ -59,7 +59,7 @@ build:
 	out/list-encoder
 	out/script-encoder
 	cd ../source && bass main.asm
-#	out/checksum
+	out/checksum
 
 patch:
 	$(call delete,../en/rom/bahamut-en-patch.bps)

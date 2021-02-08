@@ -358,8 +358,9 @@ auto ListEncoder::toText(string suffix, u32 width, string category, string name)
           continue;
         }
         if(read.command == "skip") {
-          text.append(Command::AlignSkip);
-          text.append(read.argument.natural());
+          //ignore argument and use a regular space for 12x12 text:
+          //the {skip} command is used in list text only for 8x8 strings that do not fit otherwise
+          text.append(0xef);
           continue;
         }
         if(read.command == "pause") {
@@ -369,11 +370,6 @@ auto ListEncoder::toText(string suffix, u32 width, string category, string name)
         }
         if(read.command == "wait") {
           text.append(Command::Wait);
-          continue;
-        }
-        if(read.command == "skip") {
-          //ignore argument and use a regular space for 12x12 text
-          text.append(0xef);
           continue;
         }
         if(auto index = TextEncoder::name(read.command)) {

@@ -20,11 +20,14 @@ macro seek(variable offset) {
   }
 }
 
-//mark ROM for English region instead of Japanese region
+//mark ROM for North American region instead of Japanese region
 seek($c0ffb5); db 'E'  //was 'J'
 
-//expand ROM from 4MB to 8MB
+//modify mapper from HiROM to ExHiROM
 seek($c0ffd5); db $35  //was $31
+
+//expand ROM from 4MB to 8MB
+seek($c0ffd7); db $0d  //was $0c
 
 //expand SRAM from 8KB to 32KB
 //  $30:6000-7fff: save RAM
@@ -32,6 +35,9 @@ seek($c0ffd5); db $35  //was $31
 //  $32:6000-7fff: proportional font rendering buffer
 //  $33:6000-7fff: pre-rendered name tiledata cache
 seek($c0ffd8); db $05  //was $03
+
+//change region from Japan to North America
+seek($c0ffd9); db $01  //was $00
 
 //erase the ROM checksum
 seek($c0ffdc); dw $ffff,$0000
