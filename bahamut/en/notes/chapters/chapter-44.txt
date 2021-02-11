@@ -137,6 +137,7 @@
 {end}
 
 {1282}
+Melodia's grandpa is using slang that only elderly people would use here.
 {end}
 
 {12a9}
@@ -155,6 +156,7 @@
 {end}
 
 {1347}
+Melodia's grandpa is using slang that only elderly people would use here as well.
 {end}
 
 {1376}

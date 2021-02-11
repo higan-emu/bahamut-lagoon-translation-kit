@@ -2,37 +2,6 @@ namespace combat {
 
 seek(codeCursor)
 
-//there is a bug in S-CPU A where DMAs from a lower channel#
-//can fail if an HDMA from a higher channel# targets $2100 (BBADx=$00)
-//this bug would trigger on the experience screen after combat.
-//this mitigation works by moving the HDMA to $21ff+$2100 instead.
-namespace hdmaMitigation {
-  variable(16, hdmaTable)
-
-  enqueue pc
-  seek($c11341); {
-    lda #$10; sta hdmaTable+0; lda #$80; sta hdmaTable+2
-    lda #$60; sta hdmaTable+3; lda #$80; sta hdmaTable+5
-    lda #$56; sta hdmaTable+6; lda #$80; sta hdmaTable+8
-    lda #$08; sta hdmaTable+9; lda #$80; sta hdmaTable+11
-    tda; sta hdmaTable+12  //D=0
-    lda #$01; sta $4370  //write pattern 0,1
-    lda #$ff; sta $4371  //write address $ff
-    lda.b #hdmaTable >>  0; sta $4372; sta $4378
-    lda.b #hdmaTable >>  8; sta $4373; sta $4379
-    lda.b #hdmaTable >> 16; sta $4374
-    assert(pc() == $c11395)
-  }
-  seek($c102f5); {
-    //the table is written to dynamically to perform a transition effect.
-    //the transition occurs when entering and leaving battle scenes.
-    sta hdmaTable+5  //$2100 value for the second table entry
-    sta hdmaTable+8  //$2100 value for the third table entry
-    assert(pc() == $c102fd)
-  }
-  dequeue pc
-}
-
 namespace constants {
   constant hook        = $fe
   constant terminal    = $ff
@@ -343,6 +312,7 @@ namespace write {
   //X => target index
   //Y => source index
   macro bpp4(variable source) {
+  retry{#}:
     enter; vsync(); ldb #$00
     pha; tya; mul(32); ply
     add.w #source >>  0; sta $4302
@@ -353,6 +323,10 @@ namespace write {
     lda #$01; sta $4300
     lda #$18; sta $4301
     lda #$01; sta $420b
+    //mitigation for HDMA bug in S-CPU A
+    ldx $4305; beq completed{#}
+    leave; bra retry{#}
+  completed{#}:
     leave
   }
   function bpp4 {

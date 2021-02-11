@@ -46,7 +46,7 @@ auto pApplication::processEvents() -> void {
   }
 
   //process any deferred menu updates
-  for(auto menu : pApplication::state().menuBarsToRebuild()) {
+  for(auto menu : pApplication::state().menuBarsToRebuild) {
     menu->_rebuild();
   }
   pApplication::state().menuBarsToRebuild.reset();

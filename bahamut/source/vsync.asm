@@ -36,7 +36,7 @@ macro vsync() {
   jsl vsync
 }
 
-//this function should be used instead of vsync for transfers longer than 1KB.
+//this function should be used instead of vsync for transfers larger than 1KB.
 //it will always wait for the start of the next vblank to maximize vblank time.
 function vwait {
   php; sep #$20; pha

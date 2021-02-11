@@ -47,7 +47,7 @@ auto scan(u32 target) -> void {
 auto sram() -> void {
   auto rom = file::read({pathJP, "rom/bahamut-jp.sfc"});
   u32 count = 0;
-  for(u32 address : range(0x400000)) {
+  for(u32 address : range(rom.size() - 4)) {
     u8 byte = rom[address + 0];
     u8 page = rom[address + 2];
     u8 bank = rom[address + 3];
@@ -66,6 +66,24 @@ auto sram() -> void {
       print(hex(0xc00000 + address, 6L), "\n");
       count++;
     }
+  }
+  print(count, "\n");
+}
+
+auto hdma() -> void {
+  auto rom = file::read({pathJP, "rom/bahamut-jp.sfc"});
+  u32 count = 0;
+  for(u32 address : range(rom.size() - 4)) {
+    u8 d0 = rom[address + 0];
+    u8 d1 = rom[address + 1];
+    u8 d2 = rom[address + 2];
+    u8 d3 = rom[address + 3];
+    if(d0 != 0x8f) continue;  //sta.l
+    if(d1 >= 0x0c) continue;  //$00-$0b
+    if(d2 != 0x56) continue;  //$56
+    if(d3 != 0x7e) continue;  //$7e
+    print(hex(0xc00000 + address, 6L), "\n");
+    count++;
   }
   print(count, "\n");
 }
@@ -97,4 +115,5 @@ auto nall::main() -> void {
   scan(0xee7087);  //"ＭＰ：" + "ＳＰ："
 
 //sram();
+//hdma();
 }
