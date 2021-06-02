@@ -52,7 +52,7 @@
     mov(r8, imm64{p1});
     mov(r9, imm64{p2});
     mov(rax, imm64{p3});
-    mov(dis64{rsp, 0x20}, rax);
+    mov(dis8{rsp, 0x20}, rax);
     mov(rax, imm64{function});
     call(rax);
     add(rsp, imm8{0x38});
@@ -66,9 +66,9 @@
     mov(r8, imm64{p1});
     mov(r9, imm64{p2});
     mov(rax, imm64{p3});
-    mov(dis64{rsp, 0x20}, rax);
+    mov(dis8{rsp, 0x20}, rax);
     mov(rax, imm64{p4});
-    mov(dis64{rsp, 0x28}, rax);
+    mov(dis8{rsp, 0x28}, rax);
     mov(rax, imm64{function});
     call(rax);
     add(rsp, imm8{0x38});

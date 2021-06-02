@@ -42,7 +42,7 @@ struct file_buffer {
     fileSize = source.fileSize;
     fileMode = source.fileMode;
 
-    source.bufferOffset = -1;
+    source.bufferOffset = -1LL;
     source.bufferDirty = false;
     source.fileHandle = nullptr;
     source.fileOffset = 0;
@@ -80,7 +80,7 @@ struct file_buffer {
     return data;
   }
 
-  auto reads(u32 length) -> string {
+  auto reads(u64 length) -> string {
     string result;
     result.resize(length);
     for(auto& byte : result) byte = read();
@@ -196,7 +196,7 @@ struct file_buffer {
     }
     if(!fileHandle) return false;
 
-    bufferOffset = -1;
+    bufferOffset = -1LL;
     fileOffset = 0;
     fseek(fileHandle, 0, SEEK_END);
     fileSize = ftell(fileHandle);
@@ -213,7 +213,7 @@ struct file_buffer {
 
 private:
   array<u8[4096]> buffer;
-  s32 bufferOffset = -1;
+  s64 bufferOffset = -1LL;
   bool bufferDirty = false;
   FILE* fileHandle = nullptr;
   u64 fileOffset = 0;
@@ -240,7 +240,7 @@ private:
     fseek(fileHandle, bufferOffset, SEEK_SET);
     u64 length = bufferOffset + buffer.size() <= fileSize ? buffer.size() : fileSize & buffer.size() - 1;
     if(length) (void)fwrite(buffer.data(), 1, length, fileHandle);
-    bufferOffset = -1;
+    bufferOffset = -1LL;
     bufferDirty = false;
   }
 };

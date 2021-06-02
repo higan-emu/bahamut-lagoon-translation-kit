@@ -39,8 +39,8 @@ seek($c0ffd8); db $05  //was $03
 //change region from Japan to North America
 seek($c0ffd9); db $01  //was $00
 
-//change revision from 1.0 to 1.1
-seek($c0ffdb); db $01  //was $00
+//change revision from 1.0 to 1.2
+seek($c0ffdb); db $02  //was $00
 
 //erase the ROM checksum
 seek($c0ffdc); dw $ffff,$0000
@@ -71,6 +71,7 @@ include "title.asm"
 include "chapter-large.asm"
 include "chapter-credits.asm"
 include "chapter-debugger.asm"
+include "combat-hdma.asm"
 include "combat-large.asm"
 include "combat-small.asm"
 include "combat-strings.asm"

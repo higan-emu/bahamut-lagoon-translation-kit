@@ -138,6 +138,12 @@
 
 {1282}
 Melodia's grandpa is using slang that only elderly people would use here.
+
+---
+
+[Grandpa:] No, no...
+It's not that one doesn't have to say it...
+It's that one CAN'T say it.
 {end}
 
 {12a9}
@@ -157,6 +163,12 @@ Melodia's grandpa is using slang that only elderly people would use here.
 
 {1347}
 Melodia's grandpa is using slang that only elderly people would use here as well.
+
+---
+
+Oh, no... You'll have to excuse me for that.
+It's not that I didn't come home...
+It's that I COULDN'T come home.
 {end}
 
 {1376}

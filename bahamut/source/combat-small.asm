@@ -312,7 +312,6 @@ namespace write {
   //X => target index
   //Y => source index
   macro bpp4(variable source) {
-  retry{#}:
     enter; vsync(); ldb #$00
     pha; tya; mul(32); ply
     add.w #source >>  0; sta $4302
@@ -323,10 +322,6 @@ namespace write {
     lda #$01; sta $4300
     lda #$18; sta $4301
     lda #$01; sta $420b
-    //mitigation for HDMA bug in S-CPU A
-    ldx $4305; beq completed{#}
-    leave; bra retry{#}
-  completed{#}:
     leave
   }
   function bpp4 {

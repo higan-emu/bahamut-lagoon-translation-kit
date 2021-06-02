@@ -61,6 +61,11 @@ namespace Math {
 
 #if defined(ARCHITECTURE_X86) || defined(ARCHITECTURE_AMD64)
   #include <immintrin.h>
+  #undef _serialize
+#endif
+
+#if !defined(__has_builtin)
+  #define __has_builtin(x) 0
 #endif
 
 #if defined(COMPILER_MICROSOFT)
@@ -163,14 +168,17 @@ inline auto spinloop() -> void {
 #endif
 
 #if defined(COMPILER_CLANG) || defined(COMPILER_GCC)
-  #define noinline   __attribute__((noinline))
-  #define alwaysinline  inline __attribute__((always_inline))
+  #define no_optimize __attribute__((optnone))
+  #define noinline __attribute__((noinline))
+  #define alwaysinline inline __attribute__((always_inline))
 #elif defined(COMPILER_MICROSOFT)
-  #define noinline   __declspec(noinline)
-  #define alwaysinline  inline __forceinline
+  #define no_optimize
+  #define noinline __declspec(noinline)
+  #define alwaysinline inline __forceinline
 #else
+  #define no_optimize
   #define noinline
-  #define alwaysinline  inline
+  #define alwaysinline inline
 #endif
 
 //P0627: [[unreachable]] -- impossible to simulate with identical syntax, must omit brackets ...

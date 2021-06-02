@@ -85,7 +85,7 @@ else ifeq ($(build),minified)
 else ifeq ($(build),release)
   flags += -O2 -DBUILD_RELEASE
 else ifeq ($(build),optimized)
-  flags += -O3 -DBUILD_OPTIMIZED
+  flags += -O3 -fomit-frame-pointer -DBUILD_OPTIMIZED
 else
   $(error unrecognized build type.)
 endif
@@ -93,7 +93,12 @@ endif
 # link-time optimization
 ifeq ($(lto),true)
   flags   += -fwhole-program -flto -fno-fat-lto-objects
-  options += -fwhole-program -flto=jobserver
+  options += -fwhole-program
+  ifneq ($(platform),macos)
+    options += -flto=jobserver
+  else
+    options += -flto=thin
+  endif
 endif
 
 # openmp support

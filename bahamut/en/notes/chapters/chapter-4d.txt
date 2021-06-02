@@ -137,6 +137,9 @@
 {end}
 
 {1800}
+The implied context here is:
+"You ARE good at taking care of... Yoyo.", but Byuu pauses before completing his thought.
+We've changed the line to be a little more obvious for players.
 {end}
 
 {1842}
