@@ -210,8 +210,11 @@ launch the Script Editor:
 
     $ bahamut/tools/out/script-editor
 
-The script editor window
-is divided into a number of sections:
+You should see window that looks like this:
+
+![Screenshot of the Script Editor window](.assets/script-editor.png)
+
+The window is divided into a number of sections:
 
   - On the left is a list of all the sections of the script,
     "Chapters" for normal interactions between characters
@@ -262,6 +265,8 @@ in your emulator of choice,
 you should see the text that you entered
 appear in-game!
 
+![Screenshot of the translated game](.assets/edited-script.png)
+
 Editing menus, items, and messages
 ----------------------------------
 
@@ -274,6 +279,10 @@ item names,
 and the like:
 
     $ bahamut/tools/out/list-editor
+
+You should see window that looks like this:
+
+![Screenshot of the List Editor window](.assets/list-editor.png)
 
 Like the Script Editor,
 there's a list of categories down the left hand side,
