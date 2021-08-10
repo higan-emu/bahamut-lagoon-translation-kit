@@ -339,9 +339,13 @@ Formatting
 
 When editing text,
 there are some special codes you can use
-for formatting and special effects:
+for formatting and special effects.
+
+Codes available everywhere:
 
   - `<` makes the following text italic
+      - In the italic font, `"` automatically switches
+        between opening and closing quotes
   - `>` makes the following text regular (non-italic)
   - `[` makes the following text yellow
   - `]` makes the following text white
@@ -349,8 +353,47 @@ for formatting and special effects:
   - `^` is a question-mark with a more natural width
   - `-` is a minus glyph whose width matches digit glyphs
   - `~` is a minus glyph with a more natural width
-  - There's no special code for centering text,
-    just use spaces
+  - `{right}` causes the remainder of the line
+    to be drawn at the right-hand edge;
+    must be at the beginning of the line in the script editor
+  - `{skip:5}`Insert a 5-pixel gap
+  - `{NAME}` where `NAME` is the default name of some character
+    (`{Byuu}`, `{Yoyo}`, etc.)
+    is replaced by the player-specified name;
+    in the editor,
+    a yellow underline depicts the maximum possible width of the name
+
+Codes only available in the script editor:
+
+  - `{left}` causes the line to be rendered at the left-hand edge;
+    this is the default
+  - `{center}`causes the rest of the line
+    to be rendered horizontally centered
+  - `{option}` at the beginning of a line
+    adds a gap big enough for the "current option" pointer,
+    used when the game asks you to choose between options
+  - `{pause}` waits for the player to hit a button
+    before rendering the rest of the text
+  - `{pause:10}` waits for 10 time units (frames?)
+    before rendering the rest of the text
+  - `{wait}` (not in scripts, only in fields) ???
+
+Codes only available in the list editor:
+
+  - `{icon:5}` inserts the icon for a kind of inventory item:
+    - 0: blank
+    - 1: long sword
+    - 2: axe
+    - 3: rapier
+    - 4: spear
+    - 5: magic rod
+    - 6: short sword
+    - 7: heavy armor
+    - 8: light armor
+    - 9: robe
+    - 10: potion
+    - 11: unused?
+    - 12: miscellaneous
 
 Note that
 italics and yellow text can be combined however you like.
